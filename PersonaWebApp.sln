@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaWebApp", "PersonaWebApp\PersonaWebApp.csproj", "{06EDCEDE-A978-45A4-AA4A-D867308C530A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaWebApp.Tests", "PersonaWebApp.Tests\PersonaWebApp.Tests.csproj", "{68813D41-72B3-41E4-B084-73D36E5289FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitaWebApp", "CitaWebApp\CitaWebApp.csproj", "{A6886E0E-5D5B-4B5F-8013-7849804FDB69}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A} = {06EDCEDE-A978-45A4-AA4A-D867308C530A}
+		{EFA3409E-D823-4E7F-8B9F-382243FBEE07} = {EFA3409E-D823-4E7F-8B9F-382243FBEE07}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitaWebApp.Tests", "CitaWebApp.Tests\CitaWebApp.Tests.csproj", "{503E8BB8-A8D4-4151-A05C-0470AFE0AAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecetaWebApp", "RecetaWebApp\RecetaWebApp.csproj", "{EFA3409E-D823-4E7F-8B9F-382243FBEE07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A} = {06EDCEDE-A978-45A4-AA4A-D867308C530A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecetaWebApp.Tests", "RecetaWebApp.Tests\RecetaWebApp.Tests.csproj", "{49750027-30B7-4A05-943A-B4167A0E3E31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68813D41-72B3-41E4-B084-73D36E5289FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68813D41-72B3-41E4-B084-73D36E5289FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68813D41-72B3-41E4-B084-73D36E5289FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68813D41-72B3-41E4-B084-73D36E5289FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{503E8BB8-A8D4-4151-A05C-0470AFE0AAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{503E8BB8-A8D4-4151-A05C-0470AFE0AAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{503E8BB8-A8D4-4151-A05C-0470AFE0AAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{503E8BB8-A8D4-4151-A05C-0470AFE0AAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA3409E-D823-4E7F-8B9F-382243FBEE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA3409E-D823-4E7F-8B9F-382243FBEE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA3409E-D823-4E7F-8B9F-382243FBEE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA3409E-D823-4E7F-8B9F-382243FBEE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49750027-30B7-4A05-943A-B4167A0E3E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49750027-30B7-4A05-943A-B4167A0E3E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49750027-30B7-4A05-943A-B4167A0E3E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49750027-30B7-4A05-943A-B4167A0E3E31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
