@@ -12,6 +12,7 @@ using System.Web.Http.Description;
 using CitaWebApp.DataAccess;
 using CitaWebApp.Models;
 
+
 namespace CitaWebApp.Controllers
 {
     public class CitasController : ApiController
@@ -179,10 +180,12 @@ namespace CitaWebApp.Controllers
         }
 
         private readonly HttpClient _httpClient;
+        private readonly RabbitMqService _rabbitMqService;
 
         public CitasController()
         {
             _httpClient = new HttpClient();
+            _rabbitMqService = new RabbitMqService();
         }
 
         [HttpGet]
@@ -209,5 +212,47 @@ namespace CitaWebApp.Controllers
             }
         }
 
+
+
+
+        [HttpPost]
+        [Route("api/citas/finalizar/{citaId}")]
+        public IHttpActionResult FinalizarCita(int citaId)
+        {
+            try
+            {
+                var cita = db.Citas.FirstOrDefault(c => c.Id == citaId);
+
+                if (cita == null)
+                {
+                    return NotFound();
+                }
+
+                cita.Estado = "Finalizada";
+                db.SaveChanges();
+
+                // Generar un código único para la receta
+                string codigoUnico = Guid.NewGuid().ToString();
+
+                // Crear el objeto con la información necesaria
+                var recetaInfo = new
+                {
+                    PacienteId = cita.PacienteId,
+                    Codigo = codigoUnico
+                };
+
+                // Serializar el mensaje a JSON
+                string message = Newtonsoft.Json.JsonConvert.SerializeObject(recetaInfo);
+
+                // Enviar el mensaje a RabbitMQ
+                _rabbitMqService.SendMessage(message);
+
+                return Ok($"Cita con ID {citaId} finalizada y mensaje enviado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
     }
 }

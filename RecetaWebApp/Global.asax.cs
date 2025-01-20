@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -18,6 +17,17 @@ namespace RecetaWebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            // Iniciar el consumidor al arrancar la aplicación
+            Task.Run(() => StartRabbitMqConsumer());
+        }
+
+        // Método asincrónico para iniciar el consumidor
+        private void StartRabbitMqConsumer()
+        {
+            var consumer = new RabbitMqConsumer();
+            consumer.StartConsuming();  // Iniciar la escucha de mensajes
         }
     }
 }
+
