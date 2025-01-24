@@ -21,8 +21,8 @@ namespace CitaWebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // Aquí puedes inicializar y enviar el mensaje del productor de RabbitMQ
-            var rabbitMqService = new RabbitMqService();
-            Task.Run(() => rabbitMqService.SendMessage("Este es un mensaje de prueba"));
+            //var rabbitMqService = new RabbitMqService();
+            //Task.Run(() => rabbitMqService.SendMessage("Este es un mensaje de prueba"));
 
         }
     }

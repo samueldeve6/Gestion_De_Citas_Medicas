@@ -23,7 +23,7 @@ public class RabbitMqService
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                // Declaración de exchange como 'fanout'
+                // Declaración de exchange como 'direct'
                 channel.ExchangeDeclare(exchange: _exchangeName, type: "fanout", durable: true);
 
                 var body = Encoding.UTF8.GetBytes(message);

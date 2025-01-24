@@ -9,11 +9,13 @@ namespace CitaWebApp.DataAccess
 {
     public class CitaDbContext : DbContext
     {
-
         public CitaDbContext()
-        : base("name=CitasDB")
+            : base("name=CitasDB")  
         {
         }
-        public DbSet<Cita> Citas { get; set; }
+
+
+
+        public virtual DbSet<Cita> Citas { get; set; }
     }
 }

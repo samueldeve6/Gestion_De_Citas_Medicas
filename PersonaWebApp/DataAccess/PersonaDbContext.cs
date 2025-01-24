@@ -9,7 +9,8 @@ namespace PersonaWebApp.DataAccess
 {
     public class PersonaDbContext : DbContext
     {
-        public DbSet<Persona> Personas { get; set; }
+        public virtual DbSet<Persona> Personas { get; set; }
+
         public PersonaDbContext() : base("name=PersonasDB")
         {
         }

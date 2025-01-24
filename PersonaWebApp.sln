@@ -5,8 +5,6 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaWebApp", "PersonaWebApp\PersonaWebApp.csproj", "{06EDCEDE-A978-45A4-AA4A-D867308C530A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaWebApp.Tests", "PersonaWebApp.Tests\PersonaWebApp.Tests.csproj", "{68813D41-72B3-41E4-B084-73D36E5289FB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CitaWebApp", "CitaWebApp\CitaWebApp.csproj", "{A6886E0E-5D5B-4B5F-8013-7849804FDB69}"
 	ProjectSection(ProjectDependencies) = postProject
 		{06EDCEDE-A978-45A4-AA4A-D867308C530A} = {06EDCEDE-A978-45A4-AA4A-D867308C530A}
@@ -22,6 +20,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecetaWebApp", "RecetaWebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecetaWebApp.Tests", "RecetaWebApp.Tests\RecetaWebApp.Tests.csproj", "{49750027-30B7-4A05-943A-B4167A0E3E31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaWebApp.Test", "PersonaWebApp.Test\PersonaWebApp.Test.csproj", "{2A7670EC-E7E2-4AF0-A959-F25CDD563B1E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06EDCEDE-A978-45A4-AA4A-D867308C530A} = {06EDCEDE-A978-45A4-AA4A-D867308C530A}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +35,6 @@ Global
 		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06EDCEDE-A978-45A4-AA4A-D867308C530A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68813D41-72B3-41E4-B084-73D36E5289FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68813D41-72B3-41E4-B084-73D36E5289FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68813D41-72B3-41E4-B084-73D36E5289FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68813D41-72B3-41E4-B084-73D36E5289FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6886E0E-5D5B-4B5F-8013-7849804FDB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,6 +51,10 @@ Global
 		{49750027-30B7-4A05-943A-B4167A0E3E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49750027-30B7-4A05-943A-B4167A0E3E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49750027-30B7-4A05-943A-B4167A0E3E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7670EC-E7E2-4AF0-A959-F25CDD563B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7670EC-E7E2-4AF0-A959-F25CDD563B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7670EC-E7E2-4AF0-A959-F25CDD563B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7670EC-E7E2-4AF0-A959-F25CDD563B1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,15 @@ namespace CitaWebApp.Controllers
 {
     public class CitasController : ApiController
     {
-        private CitaDbContext db = new CitaDbContext();
+        private readonly CitaDbContext db;
+
+        // Constructor con inyección de dependencias
+        public CitasController(CitaDbContext context = null, HttpClient @object = null, RabbitMqService object1 = null)
+        {
+            db = context ?? new CitaDbContext();
+        }
+
+        
 
         // GET: api/Citas
         public IQueryable<Cita> GetCitas()

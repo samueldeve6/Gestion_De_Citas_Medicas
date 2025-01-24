@@ -16,7 +16,14 @@ namespace PersonaWebApp.Controllers
 {
     public class PersonasController : ApiController
     {
-        private PersonaDbContext db = new PersonaDbContext();
+
+        private readonly PersonaDbContext db;
+
+        // Constructor con inyección de dependencias y valores por defecto
+        public PersonasController(PersonaDbContext context = null)
+        {
+            db = context ?? new PersonaDbContext();  // Si no se inyecta, crea una nueva instancia de PersonaDbContext
+        }
 
         // GET: api/Personas
         public IQueryable<Persona> GetPersonas()
