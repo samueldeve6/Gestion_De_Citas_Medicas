@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonaWebApp.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+487cc711c554980647816305dd272cdb0e2f219d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1b34eef82bc75c4aca37f5275a31fc234fcf10b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonaWebApp.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonaWebApp.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

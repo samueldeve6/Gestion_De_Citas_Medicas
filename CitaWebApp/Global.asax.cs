@@ -1,6 +1,8 @@
+using CitaWebApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -19,6 +21,7 @@ namespace CitaWebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+           
 
             // Aquí puedes inicializar y enviar el mensaje del productor de RabbitMQ
             //var rabbitMqService = new RabbitMqService();

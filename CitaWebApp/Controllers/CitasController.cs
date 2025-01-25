@@ -17,21 +17,20 @@ namespace CitaWebApp.Controllers
 {
     public class CitasController : ApiController
     {
-        private readonly CitaDbContext db;
+        private CitaDbContext db = new CitaDbContext();
 
         // Constructor con inyección de dependencias
-        public CitasController(CitaDbContext context = null, HttpClient @object = null, RabbitMqService object1 = null)
+        public CitasController(CitaDbContext context, HttpClient @object = null, RabbitMqService object1 = null)
         {
-            db = context ?? new CitaDbContext();
+            db = context ?? throw new ArgumentNullException(nameof(context)); // Si context es null, lanza una excepción
         }
-
-        
 
         // GET: api/Citas
         public IQueryable<Cita> GetCitas()
         {
             return db.Citas;
         }
+
 
         // GET: api/Citas/5
         [ResponseType(typeof(Cita))]
@@ -116,7 +115,7 @@ namespace CitaWebApp.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                db?.Dispose();
             }
             base.Dispose(disposing);
         }

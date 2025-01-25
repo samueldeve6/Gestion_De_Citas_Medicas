@@ -17,7 +17,7 @@ namespace PersonaWebApp.Controllers
     public class PersonasController : ApiController
     {
 
-        private readonly PersonaDbContext db;
+        private PersonaDbContext db = new PersonaDbContext();
 
         // Constructor con inyección de dependencias y valores por defecto
         public PersonasController(PersonaDbContext context = null)
